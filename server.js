@@ -27,7 +27,7 @@ app.get("*", (req, res) => {
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://user1:plug5050@ds063946.mlab.com:63946/heroku_ngjxm1md",
+  process.env.MONGODB_URI || "mongodb://user1:plug5050@ds263808.mlab.com:63808/heroku_728mg4rj",
   {
     useCreateIndex: true,
     useNewUrlParser: true
