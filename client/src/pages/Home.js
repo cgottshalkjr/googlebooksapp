@@ -126,7 +126,7 @@ class Home extends Component {
             </Col>
           </Row>
         </Container>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }
