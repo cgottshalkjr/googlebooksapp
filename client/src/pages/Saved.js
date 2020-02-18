@@ -21,10 +21,9 @@ class Saved extends Component {
     API.getSavedBooks().then(res => this.setState({ savedBooks: res.data }));
   };
 
-  handleDeleteClick = (event, bookId) => {
+  handleDeleteClick = (event, id) => {
     event.preventDefault();
-    API.deleteBook(bookId)
-    console.log("this book has been deleted!")
+    API.deleteBook(id)
     .then(res => this.loadSavedBooks())
     .catch(err => console.log(err));
   }
@@ -43,6 +42,7 @@ class Saved extends Component {
                   return (
                     <BookListItem
                       key={item.id}
+                      id={item._id}
                       title={item.title}
                       author={item.authors || ["Unavailable Information"]}
                       href={item.previewLink}
@@ -50,6 +50,7 @@ class Saved extends Component {
                         item.description || "Unavailable Information"
                       }
                       thumbnail={item.thumbnail}
+                      clickEvent={this.handleDeleteClick}
                     />
                   );
                 })}

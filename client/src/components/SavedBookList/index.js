@@ -16,10 +16,10 @@ export function BookListItem({
     thumbnail,
     title,
     description,
-    handleDeleteClick,
+    clickEvent,
     author,
     href,
-    bookId
+   id
 }) {
     return (
         <div className="card shadow-lg m-2 bg-white rounded">
@@ -36,7 +36,7 @@ export function BookListItem({
                         <a rel="noreferrer noopener" target="_blank" href={href}>
                           Checkout Book!
               </a>
-              <button className="btn btn-primary saveBtn float-right" onClick={bookId, handleDeleteClick}>Delete</button>
+              <button className="btn btn-primary saveBtn float-right" onClick={event => clickEvent(event, id)}>Delete</button>
                     </Col>
                 </Row>
             </Container>

@@ -12,9 +12,9 @@ export default {
   },
   // Deletes books matched with an id
   deleteBook: function(id) {
-    return axios.delete("/api/saved/" + id);
+    return axios.delete(`/api/saved/${id}`);
   },
-
+  
    // Saves book to db
   saveBook: function(book) {
     return axios.post("/api/saved/", book);
